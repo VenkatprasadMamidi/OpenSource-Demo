@@ -1,0 +1,40 @@
+ <html>  
+   <head>  
+     <title>Angular JS Model</title>  
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>  
+     <script>  
+       angular.module('MyForm', [])  
+           .controller('myController', ['$scope', function($scope) {  
+    // List student  
+       $scope.students = [  
+         { name: "Quang Trung" },  
+         { name: "Thanh Thao" },  
+         { name: "Hong Chau" },  
+         { name: "Quoc Chuong" },  
+         { name: "Xuan Hai" },  
+         { name: "Van Kinh" },  
+         { name: "Van Chinh" },  
+         { name: "Van Quyen" },  
+         { name: "Van Truong" },  
+         { name: "Van Hung" },  
+         { name: "Van Hieu" },  
+         { name: "Van Nghia" }  
+       ];  
+            }]);  
+     </script>  
+  <style>  
+     .odd {  
+       background: Green;  
+       color: #FFF;  
+     }  
+   </style>  
+   </head>  
+   <body ng-app="MyForm">  
+ <h3>Directive ng-class-odd in AngularJS</h3>  
+           <div ng-controller="MyController">  
+            <div ng-repeat="student in students" ng-class-odd="'odd'">  
+              {{student.name}}  
+            </div>  
+     </div>  
+ </body>  
+  </html> 
